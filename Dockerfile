@@ -27,9 +27,9 @@ RUN apk del gcc git
 
 USER node
 
-EXPOSE 8080
-ENV MUMBLE_SERVER=mumble.aventer.biz:64738
+EXPOSE 64737
+ENV MUMBLE_SERVER=mcserv.in:64738
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD websockify --ssl-target --web=/home/node/dist 8080 "$MUMBLE_SERVER"
+CMD websockify --ssl-target --web=/home/node/dist 64737 "$MUMBLE_SERVER"
 
